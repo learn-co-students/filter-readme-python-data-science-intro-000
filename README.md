@@ -1,7 +1,10 @@
 
-# Filter and Map in Python
+# Filter in Python
 
 ### Learning Objectives
+
+* Understand how to filtering with a for loop has common code that can be moved to a function
+* Understand how to use the filter function in Python
 
 ### Filtering Elements
 
