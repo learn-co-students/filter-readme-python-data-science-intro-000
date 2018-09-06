@@ -211,6 +211,31 @@ list(filter(ends_ing, words))
 
 > Note that when passing through the function, no parentheses are added at the end of the function.  This is important.  If we pass through the parentheses the filtering will not occur.
 
+### `Filter()` without a filter function ! 
+
+So what happens if pass a list to the `filter` without supply the first argument i.e. a filtering function. Let's try it.
+
+
+```python
+random_list = [0,'0','python', 2, True, 'flatiron', False, 38.9]
+```
+
+Our `random_list` above contains a number of different data types. Let's pass this list through `function()` and use `None` for filter function. 
+
+
+```python
+list(filter(None, random_list))
+```
+
+
+
+
+    ['0', 'python', 2, True, 'flatiron', 38.9]
+
+
+
+So we see that with filter function as `None`, the function defaults to Identity function i.e. each element in `random_list` is checked to see if it is true or not. So in the output, we only get the elements which are true. Numbers and strings are always true (this includes '0' as a string), whereas 0 and False return a False value and hence are not included in the output. 
+
 ### Summary
 
 In this section, we learned about the `filter` function, which selects the elements in a list that match a specific criteria. We learned that `filter` takes in two arguments. The first is the function that specifies the criteria specifying which elements to select, and the second argument is the list of elements to filter. Each element in the list is passed to the function one by one and if the function returns true the element is selected and put into a new array, which will be returned in the Filter object at the end.
