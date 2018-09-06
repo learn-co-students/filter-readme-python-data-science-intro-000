@@ -1,5 +1,5 @@
 
-# Filter in Python
+# `Filter()` Functions in Python
 
 ### Learning Objectives
 
@@ -54,7 +54,7 @@ And four divided by two also brings a remainder of zero.
 
 
 
-Note that the above line effectively asks (and answers) whether 4 is even.  This is because the statement 4 modulo two returns zero means that four divided by two has a remainder of zero, and as we know, any number that is divisible by two with no remainder leftover is an even number.
+Note that the above line effectively asks (and answers) whether 4 is even.  This is because the statement `4 % 2` returns a zero, which means that four divided by two has a remainder of zero, and as we know, any number that is divisible by two with no remainder leftover is an even number.
 
 Similarly, if a number is odd, then dividing by the number two results in a remainder of one. Ok so now let's write a function that checks if a number is even. 
 
@@ -90,7 +90,7 @@ def select_even(elements):
 
 
 ```python
-numbers = list(range(0, 11, 1))
+numbers = list(range(0, 11))
 numbers
 ```
 
@@ -159,7 +159,15 @@ def select_even(elements):
 
 ```
 
-Essentially, the only thing different between the functions is the criteria of how we are selecting.  The filter function, allows us to filter for specific elements, so long as it knows the criteria and the elements. 
+Essentially, the only thing different between the functions is the criteria of how we are selecting.  The `filter()` function, allows us to filter for specific elements, so long as it knows the criteria and the elements. 
+
+> The `filter()` function returns an iterator where the items are filtered through a function to test if the item is accepted or not.
+
+The general syntax of a `filter()` function is given as:
+```python
+filter ( function, iterable )
+```
+Let's apply this to filter the even numbers as we did above with a condition and loop.
 
 
 ```python
@@ -169,7 +177,7 @@ filter(is_even,numbers)
 
 
 
-    <filter at 0x102c346a0>
+    <filter at 0x10642fda0>
 
 
 
